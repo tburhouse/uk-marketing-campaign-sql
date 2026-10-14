@@ -62,23 +62,23 @@ Pinterest is the strongest channel to investigate further. In a live campaign, I
 
 
 
-1. Open `Marketing\_Campaign\_Analysis\_Dataset.xlsx` in Google Sheets or Microsoft Excel. Export the `data` sheet as a CSV file. Keep the original workbook unchanged.
+1. Open `Marketing_Campaign_Analysis_Dataset.xlsx` in Google Sheets or Microsoft Excel. Export the `data` sheet as a CSV file. Keep the original workbook unchanged.
 
 
 
-2. In MySQL Workbench, run the `CREATE DATABASE` statement at the start of `import\_and\_verify.sql` to create the `marketing\_campaign` database.
+2. In MySQL Workbench, run the `CREATE DATABASE` statement at the start of `import_and_verify.sql` to create the `marketing_campaign` database.
 
 
 
-3. Use Workbench’s Table Data Import Wizard to import the CSV into that database. Name the new table `campaign\_raw.xlsx - data` so it matches the SQL queries.
+3. Use Workbench’s Table Data Import Wizard to import the CSV into that database. Name the new table `campaign_raw.xlsx - data` so it matches the SQL queries.
 
 
 
-4. Check whether the rows imported. On my first attempt, Workbench created the table with `Spend, GBP` incorrectly typed as `BINARY(1)`, and zero rows imported. If this happens, use the `DESCRIBE` and `ALTER TABLE` statements in `import\_and\_verify.sql` to change that column to `DECIMAL(20,10)`. Retry the wizard, selecting the existing empty table. Skip this fix if the first import succeeds with an appropriate numeric type.
+4. Check whether the rows imported. On my first attempt, Workbench created the table with `Spend, GBP` incorrectly typed as `BINARY(1)`, and zero rows imported. If this happens, use the `DESCRIBE` and `ALTER TABLE` statements in `import_and_verify.sql` to change that column to `DECIMAL(20,10)`. Retry the wizard, selecting the existing empty table. Skip this fix if the first import succeeds with an appropriate numeric type.
 
 
 
-5. Run the row count and sample-row checks in `import\_and\_verify.sql`. The expected row count is 9,900.
+5. Run the row count and sample-row checks in `import_and_verify.sql`. The expected row count is 9,900.
 
 
 
