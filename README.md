@@ -1,4 +1,4 @@
-## README - SQL PORTFOLIO PROJECT
+# UK Marketing Campaign Analysis (SQL)
 
 
 
@@ -82,5 +82,5 @@ Pinterest is the strongest channel to investigate further. In a live campaign, I
 
 
 
-6\. Run the checks in `audit.sql`, followed by the queries in `analysis.sql`.
+6. Run the checks in `audit.sql`, followed by the queries in `analysis.sql`.
 
